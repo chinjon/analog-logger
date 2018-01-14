@@ -5,7 +5,7 @@
             "brand": "kodak",
             "model": "portra",
             "type": "color negative",
-            "iso": 800,
+            "iso": "800",
             "expCount": 24,
             "expDate": "01.01.2020"
         },
@@ -30,7 +30,7 @@
                     "aperture": "3.5",
                     "shutter": "1/100",
                     "lens": {
-                        "focalLength": 40
+                        "focalLength": "40"
                     }
                 },
                 "location": {
@@ -52,7 +52,7 @@
             "brand": "kodak",
             "model": "ektar",
             "type": "slide",
-            "iso": 100,
+            "iso": "100",
             "expCount": 24,
             "expDate": "01.01.2020"
         },
@@ -77,7 +77,7 @@
                     "aperture": "3.5",
                     "shutter": "1/100",
                     "lens": {
-                        "focalLength": 40
+                        "focalLength": "40"
                     }
                 },
                 "location": {
