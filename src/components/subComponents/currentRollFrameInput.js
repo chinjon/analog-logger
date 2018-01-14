@@ -1,10 +1,13 @@
 import React from 'react';
 
-export const CurrentRollFrameInput = (props) => {
+const CurrentRollFrameInput = () => {
     return (
-        <div>
-            
-        </div>
+        <section>
+            <form>
+                <label>Enter Frame Data:</label>
+            </form>
+        </section>
     )
 }
 
+export default CurrentRollFrameInput;
