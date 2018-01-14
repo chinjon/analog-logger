@@ -1,5 +1,6 @@
 {
-    "001_roll": {
+    "film": [{
+        "objectId": "001",
         "film": {
             "brand": "kodak",
             "model": "portra",
@@ -44,5 +45,5 @@
                 "location": null
             }
         }
-    }
+    }]
 }
