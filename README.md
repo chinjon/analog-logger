@@ -6,5 +6,6 @@ Its no EXIF but hey, better than _notebook + pen_ :camera:
 
 
 ###### Links
-* ['Analog Book'](https://analogbook.com/?v=7516fd43adaa)
+* ['_Analog Book_'](https://analogbook.com/?v=7516fd43adaa)
 * [_The PhotoMemo Notebook Is Made Specifically For Film Photographers_](https://www.popphoto.com/photomemo-notebook-is-made-specifically-for-film-photographers#page-3)
+* [iOS - Film Rolls](https://itunes.apple.com/us/app/film-rolls-app-for-film-photographers/id675626559)

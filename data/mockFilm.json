@@ -1,0 +1,48 @@
+{
+    "001_roll": {
+        "film": {
+            "brand": "kodak",
+            "model": "portra",
+            "type": "color negative",
+            "iso": 800,
+            "expCount": 24,
+            "expDate": "01.01.2020"
+        },
+        "dates": {
+            "loaded": "01.01.2018",
+            "finished": null,
+            "lab": null,
+            "developed": null
+        },
+        "camera": {
+            "brand": "canon",
+            "model": "ql17",
+            "type": "rangefinder",
+            "lens": {
+                "fixed": true
+            }
+        },
+        "frames": {
+            "001_frame": {
+                "dateTaken": "01.04.2018",
+                "cameraSetting": {
+                    "apeture": "3.5",
+                    "shutter": "1/100",
+                    "lens": {
+                        "focalLength": 40
+                    }
+                },
+                "location": {
+                    "geo": null,
+                    "setting": "outdoor"
+                }
+            },
+            "002_frame": {
+                "dateTaken": "01.04.2018",
+                "apeture": "3.5",
+                "shutter": "1/100",
+                "location": null
+            }
+        }
+    }
+}
