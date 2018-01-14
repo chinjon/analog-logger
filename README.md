@@ -33,6 +33,8 @@ Its no [EXIF](https://en.wikipedia.org/wiki/Exif) but hey, better than _writing 
 * Basic functionality
     * User with basic **CRUD** interactivity
 * Keep this open-source
+* Keep it simple, least amount of dependencies
+    * Minimize framework reliance
 * Cool Goals
     * Bluetooth trigger?
         * Have no idea about this
