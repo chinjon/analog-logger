@@ -26,7 +26,7 @@
             "001_frame": {
                 "dateTaken": "01.04.2018",
                 "cameraSetting": {
-                    "apeture": "3.5",
+                    "aperture": "3.5",
                     "shutter": "1/100",
                     "lens": {
                         "focalLength": 40
