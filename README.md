@@ -21,7 +21,7 @@ Its no [EXIF](https://en.wikipedia.org/wiki/Exif) but hey, better than _writing 
 * MongoDB
 
 
-### Functionality
+#### Functionality
 * Log information on roll
 * Save comprehensive data on frames/shots
     * GPS data: *where the shot was taken*
@@ -29,7 +29,7 @@ Its no [EXIF](https://en.wikipedia.org/wiki/Exif) but hey, better than _writing 
     * Quick save: *defaults to most used setting*
 
 
-### Goals
+#### Goals
 * Basic functionality
     * User with basic **CRUD** interactivity
 * Keep this open-source
