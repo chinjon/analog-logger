@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import CurrentRoll from './components/currentRoll.js';
+import CurrentRoll from './components/CurrentRoll';
 
 class App extends Component {
   render() {
