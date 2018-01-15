@@ -18,6 +18,7 @@ Its no [EXIF](https://en.wikipedia.org/wiki/Exif) but hey, better than _writing 
         * Utilize service workers for offline use
     * React Native?
         * Less likely
+* Redux (*state is going to get tricky with this app*)
 * MongoDB
 * GraphQL
 * OAuth
