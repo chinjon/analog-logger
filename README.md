@@ -26,6 +26,8 @@ Its no [EXIF](https://en.wikipedia.org/wiki/Exif) but hey, better than _writing 
 
 #### Functionality
 * Log information on roll
+    * Record camera settings for each frame
+    * Users can add additional notes (*ie: lighting conditions*)
 * Save comprehensive data on frames/shots
     * GPS data: *where the shot was taken*
     * Camera settings: *aperture, shutter speed*
