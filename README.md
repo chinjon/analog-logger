@@ -18,10 +18,13 @@ Its no [EXIF](https://en.wikipedia.org/wiki/Exif) but hey, better than _writing 
         * Utilize service workers for offline use
     * React Native?
         * Less likely
+* Redux (*state is going to get tricky with this app*)
 * MongoDB
+* GraphQL
+* OAuth
 
 
-### Functionality
+#### Functionality
 * Log information on roll
 * Save comprehensive data on frames/shots
     * GPS data: *where the shot was taken*
@@ -29,10 +32,12 @@ Its no [EXIF](https://en.wikipedia.org/wiki/Exif) but hey, better than _writing 
     * Quick save: *defaults to most used setting*
 
 
-### Goals
+#### Goals
 * Basic functionality
     * User with basic **CRUD** interactivity
 * Keep this open-source
+* Keep it simple, least amount of dependencies
+    * Minimize framework reliance
 * Cool Goals
     * Bluetooth trigger?
         * Have no idea about this
