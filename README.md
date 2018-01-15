@@ -5,6 +5,12 @@ Track your 35mm or 120 film frames with camera setting configurations.
 Its no [EXIF](https://en.wikipedia.org/wiki/Exif) but hey, better than _writing it all down_.
 
 
+***
+
+[Project Board/Road Map](https://github.com/chinjon/analog-logger/projects/1)
+
+***
+
 ###### Links
 * ['_Analog Book_'](https://analogbook.com/?v=7516fd43adaa)
 * [_The PhotoMemo Notebook Is Made Specifically For Film Photographers_](https://www.popphoto.com/photomemo-notebook-is-made-specifically-for-film-photographers#page-3)
