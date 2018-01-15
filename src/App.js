@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import CurrentRoll from './components/CurrentRoll';
+import AllRolls from './components/AllRolls';
 import mockData from './data/mockFilm.json';
 
 class App extends Component {
@@ -9,23 +10,21 @@ class App extends Component {
     super(props);
 
     this.state = {
-      mockData
+      mockData,
+      current: null
     }
   }
 
   render() {
     const { mockData } = this.state;
+
     return (
       <div className="App" id="root">
         <CurrentRoll />
         <section>
-          <h3>Everything</h3>
-          <div>
-            { mockData.film.map(roll => 
-              <div key={roll.objectId}>
-                <div>Roll: {roll.objectId}</div>
-              </div>
-            )}
+          <h3>Your Rolls</h3>
+          <div className="rollContainer">
+            <AllRolls data={mockData} />
           </div>
         </section>
       </div>
