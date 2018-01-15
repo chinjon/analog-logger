@@ -19,6 +19,8 @@ Its no [EXIF](https://en.wikipedia.org/wiki/Exif) but hey, better than _writing 
     * React Native?
         * Less likely
 * MongoDB
+* GraphQL
+* OAuth
 
 
 #### Functionality
