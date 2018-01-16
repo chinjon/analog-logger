@@ -37,7 +37,6 @@ class App extends Component {
     // const { mockData } = this.state;
     return (
       <div className="App" id="root">
-        <div>        {console.log('logged', this.state.response)}</div>
         <CurrentRoll />
         <section>
           <h3>Your Rolls</h3>
