@@ -24,6 +24,18 @@ class App extends Component {
       .catch(err => console.log(err));
   }
 
+  postTest = async (event) => {
+    event.preventDefault();
+
+    fetch('/api/test', {
+      method: 'POST',
+      headers: new Headers(),
+    }).then((res) => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err))
+  }
+
+
   callApi = async () => {
     const response = await fetch('/api/hello');
     const body = await response.json()
@@ -40,6 +52,9 @@ class App extends Component {
         <CurrentRoll />
         <section>
           <h3>Your Rolls</h3>
+          <div>
+            <button onClick={this.postTest}>Post</button>
+          </div>
           <div className="rollContainer">
             {/* <AllRolls data={mockData} /> */}
             <AllRolls data={this.state.response ? this.state.response : ''} />
