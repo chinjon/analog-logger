@@ -4,6 +4,7 @@ Track your 35mm or 120 film frames with camera setting configurations.
 
 Its no [EXIF](https://en.wikipedia.org/wiki/Exif) but hey, better than _writing it all down_.
 
+![rangefinder-picture](./rangefinder.jpg)
 
 ***
 
