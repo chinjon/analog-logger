@@ -33,6 +33,10 @@ routes.post('/api/test', (req, res) => {
         console.log('error')
         res.status(400).send(e)
     })
-})
+});
+
+routes.post('/api/newroll', (req, res) => {
+    console.log(req.body)
+});
 
 module.exports = routes;
