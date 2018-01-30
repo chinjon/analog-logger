@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
-import CurrentRoll from './components/CurrentRoll';
+// import CurrentRoll from './components/CurrentRoll';
 import AllRolls from './components/AllRolls';
+import NewRoll from './components/subComponents/NewRoll';
 // import mockData from './data/mockFilm.json';
 
 class App extends Component {
@@ -49,7 +50,8 @@ class App extends Component {
     // const { mockData } = this.state;
     return (
       <div className="App" id="root">
-        <CurrentRoll />
+        {/* <CurrentRoll /> */}
+        <NewRoll />
         <section>
           <h3>Your Rolls</h3>
           <div>
