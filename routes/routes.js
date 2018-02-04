@@ -36,7 +36,29 @@ routes.post('/api/test', (req, res) => {
 });
 
 routes.post('/api/newroll', (req, res) => {
-    console.log(req.body)
+    const dataParsed = JSON.parse(req.body);
+    
+    const newRoll = new Roll({
+        film: {
+            brand: dataParsed.film.brand,
+            model: dataParsed.film.model,
+            iso: dataParsed.film.iso,
+            expCount: dataParsed.film.expCount
+        }
+    });
+    console.log(req.body) 
+    console.log(JSON.parse(req.body).film) 
+    // console.log(newRoll)
+
+    newRoll.save()
+    .then((data) => {
+        console.log('ok', data)
+        res.send(data)
+    })
+    .catch((e) => {
+        console.log('error', e)
+        res.status(400).send(e)
+    })
 });
 
 module.exports = routes;
