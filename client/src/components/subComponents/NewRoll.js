@@ -10,6 +10,7 @@ class NewRoll extends Component {
             model: '',
             iso: '',
             expCounter: '',
+            expDate: new Date()
             
         }
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -34,7 +35,8 @@ class NewRoll extends Component {
                 brand: this.state.brand,
                 model: this.state.model,  
                 iso: this.state.iso,  
-                expCount: this.state.expCount,  
+                expCount: this.state.expCount,
+                expDate: this.state.expDate,  
             }
         }
 
@@ -76,6 +78,13 @@ class NewRoll extends Component {
                         value={this.state.expCount} 
                         onChange={this.handleChange} 
                         placeholder="Exposures"
+                    />
+                    <input 
+                        type="date" 
+                        name="expDate" 
+                        value={this.state.expDate} 
+                        onChange={this.handleChange} 
+                        placeholder=""
                     />
                     <button>Submit</button>
                 </form>
