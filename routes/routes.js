@@ -43,7 +43,8 @@ routes.post('/api/newroll', (req, res) => {
             brand: dataParsed.film.brand,
             model: dataParsed.film.model,
             iso: dataParsed.film.iso,
-            expCount: dataParsed.film.expCount
+            expCount: dataParsed.film.expCount,
+            expDate: dataParsed.film.expDate
         }
     });
     console.log(req.body) 
