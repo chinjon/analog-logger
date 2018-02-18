@@ -16,6 +16,12 @@ routes.get('/api/hello', (req, res) => {
     });
 });
 
+routes.get('/api/rolls', (req, res) => {
+    Roll.find({}, (err, data) => {
+        err ? res.status(400).send() : res.json(data);
+    });
+});
+
 routes.post('/api/test', (req, res) => {
     const roll = new Roll({
         film: {
