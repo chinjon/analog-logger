@@ -45,7 +45,13 @@ class NewRoll extends Component {
             body: JSON.stringify(newRoll)
         });
 
-        console.log(this.state)
+        this.setState({
+            brand: '',
+            model: '',
+            iso: '',
+            expCount: '',
+            expDate: '',
+        })
     }
 
     render() {
