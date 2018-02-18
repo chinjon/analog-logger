@@ -8,6 +8,7 @@ const RollSchema = new mongoose.Schema({
         expCount: Number,
         expDate: Date
     },
+    frames: []
 });
 
 const Roll = mongoose.model("Roll", RollSchema);
