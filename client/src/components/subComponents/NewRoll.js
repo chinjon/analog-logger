@@ -18,17 +18,13 @@ class NewRoll extends Component {
     }
 
     handleChange(event) {
-
         this.setState({
               [event.target.name]: event.target.value
         })
-
-        console.log(this.state)
     }
 
     handleSubmit(event) {
         event.preventDefault();
-        console.log('ok')
 
         const newRoll = {
             film: {
@@ -90,7 +86,7 @@ class NewRoll extends Component {
                         name="expDate" 
                         value={this.state.expDate} 
                         onChange={this.handleChange} 
-                        placeholder=""
+                        placeholder="Expiration Date"
                     />
                     <button>Submit</button>
                 </form>
