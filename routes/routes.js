@@ -22,24 +22,24 @@ routes.get('/api/rolls', (req, res) => {
     });
 });
 
-routes.post('/api/test', (req, res) => {
-    const roll = new Roll({
-        film: {
-            brand: 'Kodak',
-            model: 'Portra',
-            iso: '800',
-            expCount: 24,
-        }
-    });
+// routes.post('/api/test', (req, res) => {
+//     const roll = new Roll({
+//         film: {
+//             brand: 'Kodak',
+//             model: 'Portra',
+//             iso: '800',
+//             expCount: 24,
+//         }
+//     });
 
-    roll.save().then(data => {
-        console.log('ok')
-        res.send(data)
-    }, e => {
-        console.log('error')
-        res.status(400).send(e)
-    })
-});
+//     roll.save().then(data => {
+//         console.log('ok')
+//         res.send(data)
+//     }, e => {
+//         console.log('error')
+//         res.status(400).send(e)
+//     })
+// });
 
 routes.post('/api/newroll', (req, res) => {
     const dataParsed = JSON.parse(req.body);
