@@ -14,7 +14,8 @@ class App extends Component {
     this.state = {
       // mockData,
       current: null,
-      response: null
+      response: null,
+      response2: []
     }
   }
 
@@ -23,19 +24,31 @@ class App extends Component {
     this.callApi()
       .then(res => this.setState({ response: res.data }))
       .catch(err => console.log(err));
+
+    this.callApi2()
+      // .then(res => this.setState({ response2: res.data }))
+      .then(res => this.setState({response2: res}))
+      .catch(err => console.log(err));
   }
 
-  postTest = async (event) => {
-    event.preventDefault();
+  // postTest = async (event) => {
+  //   event.preventDefault();
+  //   fetch('/api/test', {
+  //     method: 'POST',
+  //     headers: new Headers(),
+  //   }).then((res) => res.json())
+  //   .then(data => console.log(data))
+  //   .catch(err => console.log(err))
+  // }
 
-    fetch('/api/test', {
-      method: 'POST',
-      headers: new Headers(),
-    }).then((res) => res.json())
-    .then(data => console.log(data))
-    .catch(err => console.log(err))
+  callApi2 = async () => {
+    const RESPONSE = await fetch('/api/rolls');
+    const BODY = await RESPONSE.json();
+
+    console.log(BODY)
+    if (RESPONSE.status !== 200) throw Error(BODY.message);
+    return BODY;
   }
-
 
   callApi = async () => {
     const response = await fetch('/api/hello');
@@ -54,12 +67,9 @@ class App extends Component {
         <NewRoll />
         <section>
           <h3>Your Rolls</h3>
-          <div>
-            <button onClick={this.postTest}>Post</button>
-          </div>
           <div className="rollContainer">
             {/* <AllRolls data={mockData} /> */}
-            <AllRolls data={this.state.response ? this.state.response : ''} />
+            <AllRolls data={this.state.response2 ? this.state.response2 : ''} />
           </div>
         </section>
       </div>
