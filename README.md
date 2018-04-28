@@ -18,6 +18,12 @@ Its no [EXIF](https://en.wikipedia.org/wiki/Exif) but hey, better than _writing 
 * [iOS - Film Rolls](https://itunes.apple.com/us/app/film-rolls-app-for-film-photographers/id675626559)
 * [What is EXIF Data?](https://photographylife.com/what-is-exif-data)
 
+***
+### To Run:
+
+CMD: `npm run dev` for localhost 
+
+***
 
 ### Stack
 * React (cause it's *so hot right now*)
