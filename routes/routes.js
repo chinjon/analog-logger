@@ -3,12 +3,10 @@ const data = require('./../data/mockFilm.json');
 const { ObjectId } = require('mongodb')
 const { Roll } = require('./../models/roll');
 
-
 routes.get('/api/test', (req, res) => {
     console.log("You've hit the route")
     res.send("this works")
 });
-
 
 routes.get('/api/hello', (req, res) => {
     res.send({
@@ -22,24 +20,14 @@ routes.get('/api/rolls', (req, res) => {
     });
 });
 
-// routes.post('/api/test', (req, res) => {
-//     const roll = new Roll({
-//         film: {
-//             brand: 'Kodak',
-//             model: 'Portra',
-//             iso: '800',
-//             expCount: 24,
-//         }
-//     });
 
-//     roll.save().then(data => {
-//         console.log('ok')
-//         res.send(data)
-//     }, e => {
-//         console.log('error')
-//         res.status(400).send(e)
-//     })
-// });
+routes.delete(`/api/delete/roll/:id`, (req, res) => {
+    console.log(req.params.id)
+
+        Roll.findByIdAndRemove(req.params.id, (err, doc) => {
+            err ? res.status(400).send() : res.json({message: 'sucessful delete'});
+        })
+})
 
 routes.post('/api/newroll', (req, res) => {
     const dataParsed = JSON.parse(req.body);
@@ -56,7 +44,7 @@ routes.post('/api/newroll', (req, res) => {
     console.log(req.body) 
     console.log(JSON.parse(req.body).film) 
     // console.log(newRoll)
-
+    
     newRoll.save()
     .then((data) => {
         console.log('ok', data)
