@@ -31,16 +31,6 @@ class App extends Component {
       .catch(err => console.log(err));
   }
 
-  // postTest = async (event) => {
-  //   event.preventDefault();
-  //   fetch('/api/test', {
-  //     method: 'POST',
-  //     headers: new Headers(),
-  //   }).then((res) => res.json())
-  //   .then(data => console.log(data))
-  //   .catch(err => console.log(err))
-  // }
-
   getRollsData = async () => {
     const RESPONSE = await fetch('/api/rolls');
     const BODY = await RESPONSE.json();
