@@ -6,14 +6,11 @@ const RollSchema = new mongoose.Schema({
         model: String,
         iso: String,
         expCount: Number,
-        // expData: Date
+        expDate: Date,
+        startDate: Date,
+        finishDate: Date
     },
-    // dates: {
-    //     loaded: Date,
-    //     finished: Date,
-    //     lab: Date,
-    //     developed: Date
-    // }
+    frames: {type: Array, "default": []}
 });
 
 const Roll = mongoose.model("Roll", RollSchema);
