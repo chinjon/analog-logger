@@ -7,7 +7,7 @@ class Roll extends Component{
         return (
             <div>
                 {console.log(this.props)}
-                <div><span>Brand: {this.props.data.brand}</span> - <span>{this.props.data.model}</span> | <span>ISO: {this.props.data.iso}</span></div>
+                <div><span>Brand: {this.props.data.film.brand}</span> - <span>{this.props.data.film.model}</span> | <span>ISO: {this.props.data.film.iso}</span> <button data-frame-id={this.props.data._id}>Delete</button></div>
                 {/* {this.props.data.frames.map(item => 
                     <Frame key={item.number} data={item}/>
                 )} */}     
