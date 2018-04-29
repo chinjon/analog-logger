@@ -20,7 +20,6 @@ routes.get('/api/rolls', (req, res) => {
     });
 });
 
-
 routes.delete(`/api/delete/roll/:id`, (req, res) => {
     console.log(req.params.id)
 
@@ -41,9 +40,6 @@ routes.post('/api/newroll', (req, res) => {
             expDate: dataParsed.film.expDate
         }
     });
-    console.log(req.body) 
-    console.log(JSON.parse(req.body).film) 
-    // console.log(newRoll)
     
     newRoll.save()
     .then((data) => {
