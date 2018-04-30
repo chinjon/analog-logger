@@ -25,23 +25,13 @@ class App extends Component {
       .then(res => this.setState({ response: res.data }))
       .catch(err => console.log(err));
 
-    this.callApi2()
+    this.getRollsData()
       // .then(res => this.setState({ response2: res.data }))
       .then(res => this.setState({response2: res}))
       .catch(err => console.log(err));
   }
 
-  // postTest = async (event) => {
-  //   event.preventDefault();
-  //   fetch('/api/test', {
-  //     method: 'POST',
-  //     headers: new Headers(),
-  //   }).then((res) => res.json())
-  //   .then(data => console.log(data))
-  //   .catch(err => console.log(err))
-  // }
-
-  callApi2 = async () => {
+  getRollsData = async () => {
     const RESPONSE = await fetch('/api/rolls');
     const BODY = await RESPONSE.json();
 
@@ -58,9 +48,24 @@ class App extends Component {
     if (response.status !== 200) throw Error(body.message);
     return body;
   };
+  
+  testDeleteCall = async (e) => {
+    e.preventDefault();
+    console.log(e.target.attributes['data-frame-id'].value);
+    
+   const RESPONSE = await fetch(`/api/delete/roll/${e.target.attributes["data-frame-id"].value}`, {
+       method: 'DELETE'
+   });
+    const BODY = await RESPONSE.json();
+
+    console.log(BODY)
+    this.getRollsData()
+    .then(res => this.setState({response2: res}))
+    .catch(err => console.log(err));
+  }
 
   render() {
-    // const { mockData } = this.state;
+    console.log(this.testDeleteCall)
     return (
       <div className="App" id="root">
         {/* <CurrentRoll /> */}
@@ -69,7 +74,7 @@ class App extends Component {
           <h3>Your Rolls</h3>
           <div className="rollContainer">
             {/* <AllRolls data={mockData} /> */}
-            <AllRolls data={this.state.response2 ? this.state.response2 : ''} />
+            <AllRolls data={this.state.response2 ? this.state.response2 : ''} deleteClick={this.testDeleteCall} />
           </div>
         </section>
       </div>

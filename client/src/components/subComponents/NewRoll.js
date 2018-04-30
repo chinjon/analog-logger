@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 
 
 class NewRoll extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-
             brand: '',
             model: '',
             iso: '',
