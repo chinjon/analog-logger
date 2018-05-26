@@ -27,6 +27,7 @@ routes.delete(`/api/delete/roll/:id`, (req, res) => {
 })
 
 routes.post('/api/newroll', (req, res) => {
+    const dataParsed = JSON.parse(req.body);
     const newRoll = new Roll({
         film: {
             brand: dataParsed.film.brand,
