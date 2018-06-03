@@ -40,7 +40,6 @@ routes.post('/api/newroll', (req, res) => {
     
     newRoll.save()
     .then((data) => {
-        console.log('ok', data)
         res.send(data)
     })
     .catch((e) => {
