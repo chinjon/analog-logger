@@ -21,16 +21,13 @@ routes.get('/api/rolls', (req, res) => {
 });
 
 routes.delete(`/api/delete/roll/:id`, (req, res) => {
-    console.log(req.params.id)
-
-        Roll.findByIdAndRemove(req.params.id, (err, doc) => {
-            err ? res.status(400).send() : res.json({message: 'sucessful delete'});
-        })
+    Roll.findByIdAndRemove(req.params.id, (err, doc) => {
+        err ? res.status(400).send() : res.json({message: 'sucessful delete'});
+    })
 })
 
 routes.post('/api/newroll', (req, res) => {
     const dataParsed = JSON.parse(req.body);
-    
     const newRoll = new Roll({
         film: {
             brand: dataParsed.film.brand,
@@ -43,7 +40,6 @@ routes.post('/api/newroll', (req, res) => {
     
     newRoll.save()
     .then((data) => {
-        console.log('ok', data)
         res.send(data)
     })
     .catch((e) => {
